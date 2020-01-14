@@ -1,0 +1,555 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    min-width: 200px;
+}
+#caixa{
+    border: 2px solid black;
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+.foto_inicial{
+    width: 100%;
+}
+
+.imagem_inicial{
+    width: 100%;
+    height: 470px;
+}
+#div_total_check{
+    width: 60%;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    margin-left: 20%;
+    position: relative;
+    top:-55px;
+    border: 2px solid black;
+}
+#div_check{
+    padding: 10px 0;
+    place-content: space-evenly;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;     /* Quando diminui a resolução, move para baixo alguns itens para ficar responsivo*/
+}
+.op_form{
+    margin: 0 10px;
+}
+.botao_verificar_disponibilidade{
+    background-color: burlywood;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;    /* Mostra tipo de corsor estilizado para clicar nos links  */
+    width: 100%;
+    font-size: 15px;
+    position: relative;
+    padding: 7px;
+}
+
+#div_botao_disponibilidade{
+    margin: 5px;
+}
+
+#nota{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#texto_quartos{
+    text-align: center;
+}
+#quartos{
+ display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+  
+}
+.div_imagem_quarto{
+    position: relative;
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.imagem_quarto{
+    width:100%; 
+    height:270px;
+}
+.total_escolha_quarto_individual{
+    width: 60%;
+    height: auto;
+    display: none;
+    padding-top: 65px;
+}
+.total_escolha_quarto_duplo{
+    width: 60%;
+    height: auto;
+    display: none;
+    padding-top: 65px;
+}
+.total_escolha_quarto_familiar{
+    width: 60%;
+    height: auto;
+    display: none;
+    padding-top: 30px;
+}
+
+#tipos_de_quarto{
+    width: 103px;
+    height: 24px;
+}
+
+#selecao_telemovel{
+    height: 26px;
+}
+
+.escolha_quarto{
+border: 2px solid rgb(167, 167, 167);
+margin-bottom: 15px;
+display: flex;
+flex-direction: column;
+padding-bottom: 5px;
+}
+
+.tipo_quarto{
+    background-color: rgb(126, 124, 124);
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.conteudo_reserva{
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    align-items: center;
+    margin-left: 2px;
+    padding: 0 5px;
+}
+
+
+.btn_reservar{
+    background-color: burlywood;
+    border: none;
+    cursor: pointer;    /* Mostra tipo de corsor estilizado para clicar nos links  */
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+}
+.botao_reservar{
+padding-right: 10px;
+}
+.peq_almoco{
+    width:20%;
+    min-width: 83px;
+}
+
+.preco_quarto{
+    font-size:30px;
+    position: relative;
+    left:35px;
+    margin-right: 50px;
+}
+
+.texto_imagem{
+    position: relative;
+    width: 100%;
+    margin-top: -45px;
+    background-color: rgba(253, 253, 253, 0.651);
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    color: black;
+    margin-left: 7px;
+}
+
+.quarto_inclui{
+    margin: 0 10px;
+}
+
+.informacoes_reserva{
+    width: 60%;
+    height: auto;
+    border: 2px solid rgb(167, 167, 167);
+    /* margin-left: 5%; */
+    margin-bottom: 2px;
+    display: none;
+    flex-direction: column; 
+    margin-top: 60px;
+}
+
+.data_reserva{
+    background-color: rgb(126, 124, 124);
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.informacoes_hotel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+}
+
+dl{
+    margin-top: 10px;
+    margin-bottom: 10x;
+}
+dt{
+    /* margin: 0 0 4px 0; */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 4px;
+    float: left;
+    clear: left;
+    width: 23%;
+    
+}
+dd{
+    float: left;
+    width: 50%;
+    /* margin: 0 0 4px 1%; */
+    margin-top: 0px;
+    margin-left: 1%;
+    margin-right: 0px;
+    margin-bottom: 4px;
+}
+
+.reserva_de_quarto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#informacoes_quarto{
+    width: 60%;
+    border: 2px solid rgb(167, 167, 167);
+    display: none;
+    flex-direction: row;
+    place-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    flex-wrap: wrap;
+}
+
+#formulario_reserva{
+    border: 2px solid rgb(167, 167, 167);
+    width: 60%;
+    height: auto;
+    display: none;
+
+}
+
+#conteudo_formulario{
+   margin-left:10%;
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+.caixa_de_texto{
+    width: 60%;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.op_tel{
+    height: 20px;
+}
+
+
+.botao_validar_subissao{
+ 
+    background-color: burlywood;
+    border: none;
+    cursor: pointer; /* Mostra tipo de corsor estilizado para clicar nos links  */
+    height: 30px;
+    float:right;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.conteudo_reserva ul{
+    list-style-type: none;
+    padding: 0;
+    min-width: 93px;
+}
+
+.preco_quarto_reserva{
+    font-size:30px;
+}
+
+
+.quarto_reserva{
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* |                                                                                                     |*/
+/* |                                         PARA DISPOSITIVOS MÓVEIS                                    |*/
+/* |                                                                                                     |*/
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+
+
+
+
+@media only screen and (max-width: 860px)
+{
+    #informacoes_quarto{
+        width: 70%;
+    }
+    .total_escolha_quarto_individual{
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+    .total_escolha_quarto_duplo{
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+    .total_escolha_quarto_familiar{
+        width: 90%;
+        height: auto;
+        display: none;
+    }   
+    
+    .informacoes_reserva{
+        width: 70%;
+    }
+    
+    #formulario_reserva{
+       width: 70%;
+       
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    #informacoes_quarto{
+        width: 80%;
+    }
+
+    .div_imagem_quarto{
+        position: relative;
+        width: 47%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    
+    } 
+    .total_escolha_quarto_individual{
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+    .total_escolha_quarto_duplo{
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+    .total_escolha_quarto_familiar{
+        width: 90%;
+        height: auto;
+        display: none;
+    }
+    .imagem_inicial{
+        width: 100%;
+        height: 300px;
+    }
+    
+    .informacoes_reserva{
+        width: 80%;
+    }
+    
+    #formulario_reserva{
+       width: 80%;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 666px)
+{
+    #quartos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+        align-items: center;
+    }
+    .div_imagem_quarto{
+        position: relative;
+        height: auto;
+        margin-bottom: 30px;
+        width:80%;
+        margin-left: 10%;
+        margin-right: 10%;
+       
+    } 
+    .imagem_inicial{
+        width: 100%;
+        height: 350px;
+    }
+    
+    .informacoes_reserva{
+        width: 80%;
+    }
+
+    #formulario_reserva{
+       width: 80%;
+
+    }
+    .quarto_reserva{
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    #quartos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+        align-items: center;
+    }
+    .div_imagem_quarto{
+        position: relative;
+        height: auto;
+        margin-bottom: 30px;
+        width:80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    } 
+    .imagem_inicial{
+        width: 100%;
+        height: 350px;
+    }
+   
+    .quarto_reserva{
+        margin-right: 20px;
+    }
+    
+}
+@media only screen and (max-width: 476px)
+{
+    .conteudo_reserva{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .peq_almoco{
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .preco_quarto{
+        left: 0;
+        margin-right: 0;
+    }
+
+    .botao_reservar {
+        padding-right: 0;
+    }
+   
+}
+@media only screen and (max-width: 400px)
+{
+    #quartos{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3%;
+        align-items: center;
+    }
+    .div_imagem_quarto{
+        position: relative;
+        height: auto;
+        margin-bottom: 30px;
+        width:80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    } 
+    .imagem_inicial{
+        width: 100%;
+        height: 350px;
+    }
+    
+    #informacoes_quarto{
+        padding-bottom: 10px;
+    }
+    
+    .quarto_reserva{
+        margin-right: 15px;
+    }
+
+    .lista_ordenada{
+        margin-right: 25px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 386px)
+{
+    dt{
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 4px;
+        width: 100%;
+        
+    }
+    dd{
+        float: left;
+        width: 10   0%;
+        margin-top: 0px;
+        margin-left: 30px;
+        margin-right: 0px;
+        margin-bottom: 4px;
+    }
+
+}
+
+@media only screen and (max-width: 270px)
+{
+
+    .op_form{
+        display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0;
+    }
+
+    #op_form_esp{
+        justify-content: center;
+    }
+
+    #tipos_de_quarto{
+        justify-content: center;
+    }
+
+}

@@ -1,0 +1,177 @@
+body
+{
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction: column;
+    min-width: 350px;
+}
+
+#body1
+{
+    background-color: rgb(2,0,1);
+
+}
+
+#body2
+{
+    background-color:#1515d7; 
+}
+
+#body3
+{
+    background-color: #ff6d00;
+}
+
+#body4
+{
+    background-color: #0000a6;
+}
+
+
+.imagem
+{
+    width:100%;
+    /*height:563px;*/
+    overflow: hidden;
+    margin-top:60px;
+}
+.imagem img{
+    width: 100%;
+    height: 100%;
+    transition: transform .5s ease;
+ }
+ 
+ .imagem:hover img{
+    transform: scale(1.03);
+ }
+
+ .trailer
+ {
+     width:100%;
+     /*min-width: 685px;*/
+    /* max-height:500px; */
+ }
+
+ #texto
+ {
+    color:#ffffff;
+    float:left;
+    padding-top:30px;
+    width:40%;
+    /*height: 315px;*/
+    margin-left:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:19px;
+ }
+
+ #titulo
+ {
+     font-size:30px;
+     font-weight: bold;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.video
+{
+    float:right;
+   /* width:35%;*/
+    height: 300px;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-right:10px;
+   /* margin: 0 auto;*/
+    display:block;
+}
+
+@media only screen and (max-width:600px)
+{
+    .video
+    {
+        float:none;
+        margin: 0 auto;
+    }
+
+    #texto
+    {
+        width:100%;
+        margin-left:0;
+    }
+}
+
+.personagens
+ {
+     width:100%;
+     height:auto;
+     place-content: space-evenly;
+     display:flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ } 
+
+ .personagem
+ {
+    width:200px;
+    height:350px;
+    text-align:center;
+    font-size:30px;
+    background-color:#012392ba;
+    color:#ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ .personagem.personagem2
+ {
+    background-color:#dddd01;
+ }
+
+ .personagem.personagem3
+ {
+    background-color: #56e102;
+ }
+
+
+ img
+ {
+    width:200px;
+    height:250px;
+ }
+
+.informacao_personagem
+{
+    display:none;
+    width:200px;
+    height:100%;
+    font-size:20.5px;
+}
+
+.descricao_personagem
+{
+    font-size: large;
+    width: 100%;
+    height: 100%;
+}
+
+.personagem:hover img
+{
+    display:none;
+}
+
+.personagem:hover .nome_personagem
+{
+    display:none;
+}
+
+.personagem:hover div
+{
+    display:block;   
+}
+
+
+
+footer
+{
+    width: 100%;
+    height: 100px;
+    color:#ffffff;
+    text-align: center;
+}

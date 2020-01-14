@@ -1,0 +1,137 @@
+body{
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 40px;
+}
+
+#cabecalho{
+    width: -webkit-fill-available;
+    position: fixed;
+    z-index: 4;
+    height: 60px;
+    top:0;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    place-content: space-between;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    padding: 0 16px;
+}
+
+#rodape p{
+    margin: 0;
+}
+
+#rodape{
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    z-index: 4;
+    text-align: center;
+    background-color: transparent;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+
+#nome_parque
+{
+    margin: 0;
+    margin-right: 16px;
+    margin-left: 5px;
+    background: linear-gradient(to right, rgba(14,0,255,0.9023984593837535) 0%, rgba(0,212,255,1) 75%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#hyper_to_home{
+    text-decoration:none;
+}
+
+#logo_name
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1118px){
+    #nome_parque
+    {
+        width: 91px;
+    }
+}
+
+@media only screen and (max-width: 1018px){
+    #nome_parque
+    {
+        width: auto;
+    }
+
+    #cabecalho{
+        flex-direction: column;
+        height: 89px;
+    }
+
+    body{
+        padding-top: 89px;
+    }
+
+    #logo_name
+    {
+        align-self: baseline;
+    }
+}
+
+@media only screen and (max-width: 847px){
+    #cabecalho{
+        flex-direction: row;
+        justify-content: center;
+        height: 60px;
+    }
+
+    #logo_name
+    {
+        align-self: center;
+    }
+
+    body{
+        padding-top: 60px;
+    }
+
+    #menudiv{
+        position: absolute;
+        left: 16px;
+        top: 5px;
+        width: 50px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #cabecalho{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    #logo_name
+    {
+        margin-left: 67px;
+    }
+}
+
+@media only screen and (max-width: 353px){
+    #nome_parque
+    {
+        width: 91px;
+    }
+}

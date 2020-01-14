@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/carrinho_compras.css">
+        <link rel="stylesheet" href="css/menu_carrinho_compras.css">
+        <link rel="stylesheet" href="css/cabecalho_rodape_carrinho_compras.css">
+        <script src="js/react.js"></script>
+        <script src="js/react-dom.js"></script>
+        <link rel="icon" type="images/jpg" href="imagens/logo.jpg"> 
+        <title>Adventure Park - Bilheteira</title>
+    </head>
+    <body onload="mostrar()">
+        <header id="cabecalho">    <!-- Cabeçalho / menu-->
+            <a href="index.html" id="hyper_to_home">
+            <div id="logo_name">
+                <img id="logo" src="imagens/logo.png">
+                <h3 id="nome_parque">Parque de diversões</h3>
+            </div>
+            </a>
+            <div id="menudiv"></div>
+            <picture id="menu_extra_1"><img id="carrinho_de_compras"src="imagens/Bilheteira/carrinho_compras.png" width="40" height="35" alt="" onclick="carrinhocompras()"></picture>
+        </header>
+        <main>
+            <div class="itens" id="item"></div>
+            <div id="preco_total"></div>
+            <div id="btn_carrinho">
+                <button onclick="gotobilheteira()">Continuar a comprar</button>
+                <input type="reset" value="Apagar itens do carrinho" onclick="apagar()">
+                
+            </div>
+        </main>
+        <footer id="rodape">      <!-- Rodapé -->
+            <div id="data-hora">12/10/2019 23:59:10</div>
+        </footer>
+        <script src="js/menu.js"></script> <!-- script do menu -->
+        <script src="js/carrinho_compras.js"></script>
+        <script src="js/data_e_hora.js"></script>
+    </body>
+</html>       

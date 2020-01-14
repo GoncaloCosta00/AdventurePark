@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">        <link rel="stylesheet" type="text/css" href="css/bilheteira.css">
+        <link rel="stylesheet" href="css/menu_carrinho_compras.css">
+        <link rel="stylesheet" href="css/cabecalho_rodape_carrinho_compras.css">
+        <script src="js/react.js"></script>
+        <script src="js/react-dom.js"></script>
+        <link rel="icon" type="images/jpg" href="imagens/logo.jpg">
+        <title>Adventure Park - Bilheteira</title>
+    </head>
+    <body>
+        <header id="cabecalho">    <!-- Cabeçalho / menu-->
+            <a href="index.html" id="hyper_to_home">
+            <div id="logo_name">
+                <img id="logo" src="imagens/logo.png" alt="">
+                <h3 id="nome_parque">Parque de diversões</h3>
+            </div>
+            </a>
+            <div id="menudiv"></div>
+            <picture id="menu_extra_1">
+                <!-- <a href="carrinho_de_compras.html"> -->
+                <img id="carrinho_de_compras 1"src="imagens/Bilheteira/carrinho_compras.png" width="40" height="35" alt="" onclick="carrinho_compras()">
+            </picture>
+        </header>
+       
+        <section>
+            <picture>
+                <img class="imagem_centro" src="imagens/Bilheteira/parque_diversoes.jpg" alt="">
+            </picture>
+            <h1 id="bilheteira">BILHETEIRA</h1>
+        </section>
+
+
+        <!--
+     ------------------------------------------------------------------------------------------------
+    |                                                                                                |
+    |                                                   Espetáculos                                  |
+    |                                                                                                |
+    -------------------------------------------------------------------------------------------------     -->
+    
+
+        <div class="div_titulo"><h2 class="titulo_bilhetes">ESPETÁCULOS</h2></div>
+        <div class="conteiner_bilhetes">
+            <div class="div_bilhete_botao">
+                <div class="bilhete">
+                    <img class="imagem_ticket" src="imagens/Bilheteira/bilhete.jpg" alt="">
+                    <div class="informacoes_bilhete">
+                        <div class="tipo_de_bilhete">
+                            <h3 class="numero_dias" id="tipo_b1">Cinema</h3>
+                        </div>
+                        <div class="informacao">
+                            <div class="informacao_preco_adultos">
+                                <span class="label_adulto">Adulto</span>
+                               <div class="caixas_informacao">
+                                   <label class="online">Online: 10€</label>
+                                   <label class="park">No parque: 15€</label>
+                               </div>
+                            </div>
+                            <div class="informacao_preco_criancas">
+                                <span class="label_adulto">Crianças</span>
+                               <div class="caixas_informacao">
+                                   <label class="online">Online: 5€</label>
+                                   <label class="park">No parque: 7€</label>
+                               </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <div class="div_op_btn">
+                        <div class="op_compra">
+                            <div class="opcoes_compra">
+                                <label>Adultos</label><br>
+                                <input type="number" class="n_adultos" id="a_b1" min="0" value="0">
+                            </div>
+                            <div  class="opcoes_compra">
+                                <label>Crianças</label><br>
+                                <input type="number" class="n_criancas" id="c_b1" min="0" value="0">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="div_botao_comprar">
+                    <button class="btn_comprar" onclick="compra_bilhete(1)">Comprar</button>
+                </div>
+            </div>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+            <div class="div_bilhete_botao">
+                <div class="bilhete">
+                    <img class="imagem_ticket" src="imagens/Bilheteira/bilhete.jpg" alt="">
+                    <div class="informacoes_bilhete">
+                        <div class="tipo_de_bilhete">
+                            <h3 class="numero_dias" id="tipo_b2">Aquático</h3>
+                        </div>
+                        <div class="informacao">
+                            <div class="informacao_preco_adultos">
+                                <span class="label_adulto">Adulto</span>
+                               <div>
+                                   <label class="online">Online: 10€</label>
+                                   <label class="park">No parque: 15€</label>
+                               </div>
+                            </div>
+                            <div class="informacao_preco_criancas">
+                                <span class="label_adulto">Crianças</span>
+                               <div>
+                                   <label class="online">Online: 5€</label>
+                                   <label class="park">No parque: 7€</label>
+                               </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <div class="div_op_btn">
+                        <div class="op_compra">
+                            <div class="opcoes_compra">
+                                <label>Adultos</label><br>
+                                <input type="number" class="n_adultos" id="a_b2" min="0" value="0">
+                            </div>
+                            <div  class="opcoes_compra">
+                                <label>Crianças</label><br>
+                                <input type="number" class="n_criancas" id="c_b2" min="0" value="0">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="div_botao_comprar">
+                    <button class="btn_comprar" onclick="compra_bilhete(2)">Comprar</button>
+                </div>
+            </div>
+
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+<div class="div_bilhete_botao">
+    <div class="bilhete">
+        <img class="imagem_ticket" src="imagens/Bilheteira/bilhete.jpg" alt="">
+        <div class="informacoes_bilhete">
+            <div class="tipo_de_bilhete">
+                <h3 class="numero_dias" id="tipo_b3">Temático</h3>
+            </div>
+            <div class="informacao">
+                <div class="informacao_preco_adultos">
+                    <span class="label_adulto">Adulto</span>
+                   <div>
+                       <label class="online">Online: 10€</label>
+                       <label class="park">No parque: 15€</label>
+                   </div>
+                </div>
+                <div class="informacao_preco_criancas">
+                    <span class="label_adulto">Crianças</span>
+                   <div>
+                       <label class="online">Online: 5€</label>
+                       <label class="park">No parque: 7€</label>
+                   </div>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="div_op_btn">
+            <div class="op_compra">
+                <div class="opcoes_compra">
+                    <label>Adultos</label><br>
+                    <input type="number" class="n_adultos" id="a_b3" min="0" value="0">
+                </div>
+                <div  class="opcoes_compra">
+                    <label>Crianças</label><br>
+                    <input type="number" class="n_criancas" id="c_b3" min="0" value="0">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="div_botao_comprar">
+        <button class="btn_comprar" onclick="compra_bilhete(3)">Comprar</button>
+    </div>
+</div>
+
+<!--
+     ------------------------------------------------------------------------------------------------
+    |                                                                                                |
+    |                                                   PARQUES                                      |
+    |                                                                                                |
+    -------------------------------------------------------------------------------------------------     -->
+
+
+
+</div>
+        <!--      --------------------------------------------------------------------------------         -->
+
+        <div class="div_titulo"><h2 class="titulo_bilhetes">Parques</h2></div>
+        <div class="conteiner_bilhetes">
+            <div class="div_bilhete_botao">
+                <div class="bilhete">
+                    <img class="imagem_ticket" src="imagens/Bilheteira/bilhete2.jpg" alt="">
+                    <div class="informacoes_bilhete">
+                        <div class="tipo_de_bilhete">
+                            <h3 class="numero_dias" id="tipo_p1">Viseu Park</h3>
+                        </div>
+                        <div class="informacao">
+                            <div class="informacao_preco_adultos">
+                                <span class="label_adulto">Adulto</span>
+                               <div>
+                                   <label class="online">Online: 40€</label>
+                                   <label class="park">No parque: 50€</label>
+                               </div>
+                            </div>
+                            <div class="informacao_preco_criancas">
+                                <span class="label_adulto">Crianças</span>
+                               <div>
+                                   <label class="online">Online: 25€</label>
+                                   <label class="park">No parque: 35€</label>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="div_ndias">
+                            <label class="label_dias"  >Número de dias:</label>
+                            <input class="i_dias" type="number" id="dias_p1" min="1" value="1">
+                        </div>
+                    </div>
+                
+                    <div class="div_op_btn">
+                        <div class="op_compra">
+                            <div class="opcoes_compra">
+                                <label>Adultos</label><br>
+                                <input type="number" class="n_adultos" id="a_p1" min="0" value="0">
+                            </div>
+                            <div  class="opcoes_compra">
+                                <label>Crianças</label><br>
+                                <input type="number" class="n_criancas "id="c_p1" min="0" value="0">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="div_botao_comprar">
+                    <button class="btn_comprar" onclick="compra_bilhete(5)">Comprar</button>
+                </div>
+                
+            </div>
+          
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+            <div class="div_bilhete_botao">
+                <div class="bilhete">
+                    <img class="imagem_ticket" src="imagens/Bilheteira/bilhete2.jpg" alt="">
+                    <div class="informacoes_bilhete">
+                        <div class="tipo_de_bilhete">
+                            <h3 class="numero_dias" id="tipo_p2">Adventure Park</h3>
+                        </div>
+                        <div class="informacao">
+                            <div class="informacao_preco_adultos">
+                                <span class="label_adulto">Adulto</span>
+                               <div>
+                                   <label class="online">Online: 40€</label>
+                                   <label class="park">No parque: 50€</label>
+                               </div>
+                            </div>
+                            <div class="informacao_preco_criancas">
+                                <span class="label_adulto">Crianças</span>
+                               <div>
+                                   <label class="online">Online: 25€</label>
+                                   <label class="park">No parque: 35€</label>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="div_ndias">
+                            <label class="label_dias"  >Número de dias:</label>
+                            <input class="i_dias" type="number" id="dias_p2" min="1" value="1">
+                        </div>
+                    </div>
+                    
+                    <div class="div_op_btn">
+                        <div class="op_compra">
+                            <div class="opcoes_compra">
+                                <label>Adultos</label><br>
+                                <input type="number" class="n_adultos" id="a_p2" min="0" value="0">
+                            </div>
+                            <div  class="opcoes_compra">
+                                <label>Crianças</label><br>
+                                <input type="number" class="n_criancas "id="c_p2" min="0" value="0">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="div_botao_comprar">
+                    <button class="btn_comprar" onclick="compra_bilhete(6)">Comprar</button>
+                </div>
+            </div>
+
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+<div class="div_bilhete_botao">
+    <div class="bilhete">
+        <img class="imagem_ticket" src="imagens/Bilheteira/bilhete2.jpg" alt="">
+        <div class="informacoes_bilhete">
+            <div class="tipo_de_bilhete">
+                <h3 class="numero_dias" id="tipo_p3">Ferrari Park</h3>
+            </div>
+            <div class="informacao">
+                <div class="informacao_preco_adultos">
+                    <span class="label_adulto">Adulto</span>
+                   <div>
+                       <label class="online">Online: 40€</label>
+                       <label class="park">No parque: 50€</label>
+                   </div>
+                </div>
+                <div class="informacao_preco_criancas">
+                    <span class="label_adulto">Crianças</span>
+                   <div>
+                       <label class="online">Online: 25 €</label>
+                       <label class="park">No parque: 35€</label>
+                   </div>
+                </div>
+            </div>
+            <div class="div_ndias">
+                <label class="label_dias" >Número de dias:</label>
+                <input class="i_dias" type="number"id="dias_p3" min="1" value="1">
+            </div>
+        </div>
+    
+        <div class="div_op_btn">
+            <div class="op_compra">
+                <div class="opcoes_compra">
+                    <label>Adultos</label><br>
+                    <input type="number" class="n_adultos" id="a_p3" min="0" value="0">
+                </div>
+                <div  class="opcoes_compra">
+                    <label>Crianças</label><br>
+                    <input type="number" class="n_criancas "id="c_p3" min="0" value="0">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="div_botao_comprar">
+        <button class="btn_comprar" onclick="compra_bilhete(7)">Comprar</button>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------------- -->
+</div>
+
+<!-- ------------------------------------------------------------------------------------------- -->
+    
+        
+
+
+        <footer id="rodape">      <!-- Rodapé -->
+            <div id="data-hora">12/10/2019 23:59:10</div>
+        </footer>
+        <script src="js/menu.js"></script> <!-- script do menu -->
+        <script src="js/bilheteira.js"></script>
+        <script src="js/data_e_hora.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Temáticos</title>
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/espetaculos.css">
+<link rel="stylesheet" href="css/cabecalho_rodape_espetaculos.css">
+<link rel="stylesheet" href="css/slideshow_espetaculos.css">
+<script src="js/react.js"></script>
+<script src="js/react-dom.js"></script>
+</head>
+<body id="body2">
+<!-------MENU---------->
+<header id="cabecalho">    <!-- Cabeçalho -->
+    <a href="index.html" id="hyper_to_home">
+    <div id="logo_name">
+        <img id="logo" src="imagens/logo.png" alt="logo">
+        <h3 id="nome_parque">Parque de diversões</h3>
+    </div>
+    </a>
+    <div id="menudiv"></div>
+</header>
+<!--SLIDESHOW-->
+
+<section id="main_section"> 
+     <div class="slideshow_principal"> <!--  caixa onde ficam as imagens -->
+     <img id="img1" class="slide_img">
+        <img id="img2" class="slide_img">
+        
+        <div id="dot_div"></div>
+    </div>
+    
+</section> 
+<!--APRESENTAÇÃO--> 
+<section>
+    <div class="mostrar">
+        <div class="texto tematico"><p class="titulo tematico">As Aventuras de Tadeo Jones</p><p>Um ícone infantil agora mais perto do que nunca! Conheça Tadeo Jones e junte-se a ele numa aventura que certamente o manterá alerta.</p></div>
+            <img class="imagem_aquatico" src="imagens/espetaculos/t1.jpg" alt="tadeo">
+    </div>
+    <div class="mostrar"> 
+        <div class="texto tematico"><p class="titulo tematico">SésamoAventura</p><p>Os habitantes da Vila Sésamo vão recebê-lo de uma maneira especial num mundo mágico que foi enfeitado para celebrar um Natal inesquecível com todos os visitantes do parque.</p></div>
+           <img class="imagem_aquatico" src="imagens/espetaculos/t2.png" alt="sesamo">
+    </div>
+</section>
+<footer id="rodape">      <!-- Rodapé -->
+    <div id="data-hora">12/10/2019 23:59:10</div>
+</footer>
+<!--SCRIPTS JS & REACT-->
+<script src="js/menu.js"></script>
+<script src="js/slideshow_tematico.js"></script>
+<script src="js/data_e_hora.js"></script>
+</body>
+</html>

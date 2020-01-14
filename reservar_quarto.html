@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    		<meta charset="UTF-8">
+            <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+            <link rel="stylesheet" type="text/css" href="css/reservar_quarto.css">
+            <link rel="stylesheet" href="css/menu.css">
+            <link rel="stylesheet" href="css/cabecalho_rodape.css">
+            <script src="js/react.js"></script>
+            <script src="js/react-dom.js"></script>
+            <link rel="icon" type="images/jpg" href="imagens/logo.jpg">
+            <title>Adventure Park - Reservar Quarto</title>
+    </head>
+    <body onload="local()">   
+        <header id="cabecalho">    <!-- Cabeçalho -->
+            <a href="index.html" id="hyper_to_home">
+            <div id="logo_name">
+                <img id="logo" src="imagens/logo.png" alt="">
+                <h3 id="nome_parque">Parque de diversões</h3>
+            </div>
+            </a>
+            <div id="menudiv"></div>
+        </header>
+        <div id="imagem_inicial">
+            <picture id="foto_inicial">
+                <img class="imagem_inicial" src="imagens/quartos/q2.jpg" alt="">
+            </picture>
+        </div>
+            <div id="div_total_check">
+                <div id="div_check"> 
+                    <div class="op_form">
+                        <label>Check-in</label><br><input type="date"  id="data_check_in" min="" required>
+                    </div>
+                    <div class="op_form">
+                        <label>Check-out</label><br><input type="date" name="data_out" id="data_check_out" min="" onclick="restricao_data()" required>                   
+                    </div>
+                    <div class="op_form" id="op_form_esp">
+                        Tipo de quarto<br>
+                        <select name="sel_tipo_quarto" id="tipos_de_quarto">
+                            <option value="Individual">Individual</option>
+                            <option value="Duplo">Duplo</option>
+                            <option value="Familiar">Familiar</option>
+                        </select> 
+                    </div>
+                    <div id="div_botao_disponibilidade">
+                        <br>
+                        <button class="botao_verificar_disponibilidade" onclick="mostrar_quartos()">Verificar disponibilidade</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Quartos_Total">
+            <div id="texto">
+                <h1 id="texto_quartos">Quartos e Suites</h1>
+            </div>
+            <div id="quartos">
+                <div class="div_imagem_quarto">
+                    <img class="imagem_quarto" src="imagens/quartos/q_ind_1.jpg" alt="">
+                    <div class="texto_imagem">
+                        <h3 class="legenda_img_quarto">Quarto Individual</h3>
+                    </div>
+                </div>
+                <div class="div_imagem_quarto">
+                    <img class="imagem_quarto" src="imagens/quartos/q1.jpg" alt="">
+                    <div class="texto_imagem">
+                        <h3 class="legenda_img_quarto">Quarto Duplo</h3>
+                    </div>
+                </div>
+                <div class="div_imagem_quarto">
+                    <img class="imagem_quarto" src="imagens/quartos/suite_2.jpg" alt="">
+                    <div class="texto_imagem">
+                        <h3 class="legenda_img_quarto">Suite</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="reserva_de_quarto">
+        <!--                                  QUARTOS INDIVIDUAIS                              -->
+        <div class="total_escolha_quarto_individual" id="escolha1">
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto Individual</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço não incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">70€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(1)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto Individual</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">80€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(2)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="escolha_quarto">
+                <div class="tipo_quarto">Suite</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">130€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(3)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!--                                  QUARTOS DUPLOS                                   -->
+
+         <div class="total_escolha_quarto_duplo" id="escolha2">
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto Duplo</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço não incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">85€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(4)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto Duplo</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">95€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(5)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="escolha_quarto">
+                <div class="tipo_quarto">Suite</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">130€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(6)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!--                                  QUARTOS FAMILIARES                               -->
+        
+         <div class="total_escolha_quarto_familiar" id="escolha3">
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto familiar (cama de casal + 2 camas individuais)</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço não incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">70€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(7)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="escolha_quarto">
+                <div class="tipo_quarto"> Quarto familiar (cama de casal + 2 camas individuais)</div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco">Pequeno almoço incluido</div>
+                    <nav class="quarto_inclui">
+                        <ul style="list-style-type: none;">
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>
+                    <div class="preco_quarto">80€</div>
+                    <div class="botao_reservar">
+                        <button class="btn_reservar" onclick="formulario(8)">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--    -------------------------------------------------------------------------                -->
+            <div class="informacoes_reserva" id="reservadequarto">
+                <div class="data_reserva" id="data">Reserva desde X até X</div>
+                <div class="informacoes_hotel">
+                    <dl>                 <!--Lista de descrição  -->
+                        <dt class="lista_ordenada">Endereço do Hotel:</dt>
+                        <dd class="lista_ordenada">Rua tal e tal</dd>
+                        <dt class="lista_ordenada">Receção:</dt>
+                        <dd class="lista_ordenada">disponível 24h/dia</dd>
+                        <dt class="lista_ordenada">Check-in:</dt>
+                        <dd class="lista_ordenada">até às 11:30</dd>
+                        <dt class="lista_ordenada">Check-out:</dt>
+                        <dd class="lista_ordenada">até às 10:45</dd>
+                    
+                    </dl>
+                </div>
+            </div>
+            <div id="informacoes_quarto">
+                <div class="quarto_reserva"><label id="tipo_quarto_reserva">Quarto Individual</label></div>
+                <div class="conteudo_reserva">
+                    <div class="peq_almoco"><label id="peq_almoco">Pequeno almoço não incluido</label></div>
+                    <nav class="quarto_inclui">
+                        <ul>
+                            <li>Wifi gratuito</li>
+                            <li>WC privativa</li>
+                            <li>mini-bar</li>
+                            <li>Serviço de quartos</li>
+                        </ul>
+                    </nav>  
+                    <div class="preco_quarto_reserva"> <label class="preco">85€</label></div>
+                </div>
+            </div>
+            <form id="formulario_reserva" autocomplete="on" onsubmit="validar_submissao()">
+                <div id="conteudo_formulario">
+                     Nome completo:<br>
+                    <input type="text" class="caixa_de_texto" name="nome" id="nome_completo" required><br>
+                    Morada:<br>
+                    <input type="text" class="caixa_de_texto" name="morada" id="morada_pessoa" required><br>
+                    NIF:<br>
+                    <input type="number" class="caixa_de_texto" name="nif" id="nif_pessoa" required><br>
+                    Email: <br>
+                    <input type="email" class="caixa_de_texto" name="email" id="email_pessoa" required><br>
+                    Telemóvel:<br>
+                    <select id="selecao_telemovel" onchange="validar_telefone()">
+                        <option value="alemanha">(+49) Alemanha</option>
+                        <option value="brasil">(+55) Brasil</option>
+                        <option value="chile">(+385) Chile</option>
+                        <option value="espanha">(+34) Espanha</option>
+                        <option value="franca">(+33) França</option>
+                        <option value="luxemburgo">(+352) Luxemburgo</option>
+                        <option value="portugal">(+351) Portugal</option>
+                        <option value="reino_unido">(+44) Reino Unido</option>
+                        <option value="suica">(+41) Suíça</option>
+                    </select>
+                    <input type="tel" class="caixa_de_texto" name="telefone" id="telefone_pessoa" placeholder="ex: 15120120101" pattern ="1[567][0-9]{9}" required ><br>
+                    <div id="div_botao_validar">
+                        <input type="submit" value="reservar" class="botao_validar_subissao">
+                    </div>
+                   
+                </div> 
+            </form>
+        
+        </section>
+         <div style="height: 50px;"></div>
+        <footer id="rodape">      <!-- Rodapé -->
+            <div id="data-hora">12/10/2019 23:59:10</div>
+        </footer>
+        <!-- --------------------------------------------------------------------------------- -->
+       
+        <script src="js/menu.js"></script> <!-- script do menu -->
+        <script src="js/Reservar_quarto.js"></script>
+        <script src="js/data_e_hora.js"></script>
+        <!-- <script src="../Contacto/contacto.js"></script> -->
+    </body>   
+</html>

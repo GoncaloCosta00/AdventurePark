@@ -1,0 +1,113 @@
+*{margin: 0; padding: 0;}  /* Coloca as margens e padding do navegador a 0*/
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.elemento{
+    /* border: 2px solid black; */
+    box-shadow:  4px 3px 14px 3px rgba(0,0,0,0.58);
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.logo_pt{
+    width: 22px;
+    height: 15px;
+}
+.imagem_teammate{
+    padding-left: 10px;
+    max-width: 100px;
+    max-height: 120px;
+}
+
+.info{
+    width: 100%;
+    text-align: right;
+    align-items: center;
+}
+
+div.info h4{
+    padding-bottom: 3px;
+}
+div.info p{
+    padding-bottom: 20px;
+}
+
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+h2{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+hr{
+    margin-top: 15px;
+}
+.parque{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#equipa{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.elementos_grupo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* |                                                                                                     |*/
+/* |                                         PARA DISPOSITIVOS MÓVEIS                                    |*/
+/* |                                                                                                     |*/
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+@media only screen and (max-width: 665px){
+    .elemento{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 440px){
+
+    /* .elemento{
+        display: block;
+    } */
+    .imagem_teammate{
+        width: 75%;
+    }
+
+    /* .info{
+        text-align: initial;
+    } */
+  
+}
+
+@media only screen and (max-width: 300px){
+
+    .elemento{
+        display: block;
+    }
+    .imagem_teammate{
+        width: 75%;
+    }
+
+    .info{
+        text-align: initial;
+    }
+   
+
+
+}

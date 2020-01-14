@@ -1,0 +1,82 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.dados{
+    display:flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.dados label{
+    font-size: 16px;
+}
+
+.dados input{
+    border: 1px solid black;
+    background-color: white;
+    padding: 0 3px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#mensagem{
+    resize: vertical;
+    max-height: 144px;
+    min-height: 66px;
+}
+
+#formulario_contacto{
+    margin: 16px 0;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 20%);
+    border-radius: 10px;
+    width: 300px;  /*largura do formulario*/
+}
+
+.botoes{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 16px;
+}
+
+.botoes input{
+    margin: 0 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+#formulario_contacto_div{
+    display: flex;
+    justify-content: center;
+}
+
+#aviso{
+    position: relative;
+    top: -5px;
+    margin: 0 16px;
+    font-size: 10px;
+}
+
+.dados textarea{
+    border: 1px solid black;
+    background-color: white;
+    padding: 0 3px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.dados select{
+    border: 1px solid black;
+    background-color: white;
+    padding: 0 3px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#titulo{
+    text-align: center;
+}

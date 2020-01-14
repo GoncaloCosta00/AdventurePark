@@ -1,0 +1,158 @@
+*{margin: 0; padding: 0;}  /* Coloca as margens e padding do navegador a 0*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+/*                                        CORPO PÁG                                            */
+/*---------------------------------------------------------------------------------------------*/ 
+.texto{ /* Texto inicial antes de todas as diversões */
+    /* position: absolute; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+h1{
+ color:rgb(255, 174, 0);
+}
+
+#div_titulo_parque{
+    background-color: white;    
+    padding-top: 10px;
+}
+#titulo_parque{
+    font-size: 72px; 
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    /*TÍTULO COM GRADIENTE*/
+    background: linear-gradient(to right, rgb(255, 174, 0) 0%, rgb(209, 211, 90) 75%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.Titulo_Diversoes{
+    color: rgb(214, 185, 99);
+ }
+
+.p_textodiversao{ /* Texto de cada diversão*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.Diversao{
+    margin-bottom: 3%;
+}
+
+.Video_Diversao{  /* vídeo de cada diversão*/
+    float: right;
+    margin-right: 7px;
+    margin-top: 5px;
+    
+}
+#fundo_texto{
+    margin-left: 10px;
+    margin-right: 7px;
+}
+
+#imagem_centro{
+    width:100%;
+    max-height: 400px;
+    height: auto;
+}
+h3{
+    margin-left: 7px;
+}
+.texto_imagem{
+    margin-top: -30px;
+    background-color: rgba(214, 185, 99, 0.63); /* rgba -> a -> opacidade -> 0-muito 1-nada*/
+    width: 100%;
+ 
+}
+.nome_atracao{
+    text-decoration: black;
+}
+
+.imagem_outras_atracoes{
+    width:100%; 
+    height:270px;
+}   
+
+.imagem_e_texto_outras_atracoes{
+    position: relative;
+    width: 320px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.outras_atracoes{
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+
+.seta_dir{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 87%;
+    width: 7%;
+}
+.seta_esq{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 5%;
+    width: 7%;
+}
+
+.mySlides {
+    display:none;
+}
+
+button{
+    width: 5%;
+    height: 23px;
+}
+.botao_esquerda{
+    position: absolute;
+    margin-top: 130px;
+}
+.botao_direira{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 95%;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* |                                                                                                     |*/
+/* |                                         PARA DISPOSITIVOS MÓVEIS                                    |*/
+/* |                                                                                                     |*/
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+@media only screen and (max-width: 978px)
+{
+    .outras_atracoes{
+        justify-content: center;
+    }
+    .imagem_e_texto_outras_atracoes{
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 322px)
+{
+    .Video_Diversao{
+        width: 100%;
+    }
+}

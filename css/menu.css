@@ -1,0 +1,145 @@
+#menudiv{
+    width: 830px;
+}
+
+/*aspeto da pagina em monitores com mais de 820px delargura*/
+#botaomenu{  /*igualar o botao do menu ao menudiv*/
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#imagem_menu{  /*colocar a imagem do menu escondida*/
+    display: none;
+}
+
+/*menu------------------------------------------------------------------------------------------------------------------*/
+#menu{  /*configurar aspeto grafico da caixa onde fica o menu*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+}
+
+.elemento_menu{  /*aspeto grafico dos botoes do menu*/
+    position: relative;
+    width:150px;  /*largura do menu*/
+    text-align: center;
+}
+
+.elemento_menu .amenu{  /*aspeto grafico do texto dos botoes do menu*/
+    color:#333333; 
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;  /*remover a underline*/
+    padding:5px 10px;  
+    display:block;  /*serve para ficar do tamanho da div onde se encontra colocado*/
+    font-size: 16px;
+}
+
+/*
+para deixar o menu selecionado enquanto se navega o submenu
+.elemento_menu:hover .amenu
+
+para nao deixar o menu selecionado enquanto se navega o submenu
+.elemento_menu .amenu:hover
+*/
+/*modifica o aspeto do texto dos botoes do menu*/
+.elemento_menu:hover .amenu{  /*acao de clicar(mobile) ou passar o rato por cima(pc) nos botoes do menu*/
+    background:#333333;
+    color:#ffffff;
+    text-shadow:0px 0px 5px #ffffff; /* Efeito de brilho -> px px px -> coordenadas (x,y,z)*/
+    font-style: italic;
+}
+
+/*faz o submenu aparecer*/
+.elemento_menu:hover .submenu{  /*acao de clicar(mobile) ou passar o rato por cima(pc) nos botoes do menu*/
+    display:block;
+} 
+
+/*submenu---------------------------------------------------------------------------------------------------------------*/
+.submenu{  /*configurar aspeto grafico da caixa onde fica o submenu*/
+    position: absolute;
+    background-color:#ffffff; 
+    border-radius: 10px;
+    display:none;   /*inicialmente o submenu fica escondido*/
+    z-index: 6;
+    top: 100%;
+    width: 100%;
+    left: 0;
+}
+
+.elemento_submenu{  /*aspeto grafico dos botoes do submenu*/
+    position: relative;
+    width:100%;  /*largura do menu*/
+    text-align: center;
+}
+
+.elemento_submenu .asub{  /*aspeto grafico do texto dos botoes do submenu*/
+    color:#333333; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;  /*remover a underline*/
+    padding:5px 10px;   
+    display:block;  /*serve para ficar do tamanho da div onde se encontra colocado*/
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/*modifica o aspeto do texto dos botoes do submenu*/
+.elemento_submenu:hover .asub{   /*acao de clicar(mobile) ou passar o rato por cima(pc) nos botoes do submenu*/
+    background:#333333;
+    color:#ffffff;
+    text-shadow:0px 0px 5px #ffffff; /* Efeito de brilho -> px px px -> coordenadas (x,y,z)*/
+    font-style: italic;
+}
+
+/*aspeto grafico para monitores de tamanho menor que 820px*/
+@media only screen and (max-width: 847px){
+    #menudiv{
+        width: 100%;
+    }
+
+    #imagem_menu{  /*faz com que a imagem do menu apareca*/
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    
+    #botaomenu{  /*ajustar o tamanho da imagem do botao*/
+        width: 50px;  /*largura do icone menu*/
+        height: 50px;  /*altura do icone menu*/
+    }
+    
+    #botaomenu:hover{  /*quando se clica no botao, ajustar a largura do menu para a pretendida*/
+        width: 150px;  /*largura do menu*/
+        height: auto;
+    }
+
+    #botaomenu:hover #imagem_menu{  /*esconder o icone do menu quando se clica no botao*/
+        display: none;
+    }
+
+    #botaomenu:hover #menu{  /*faz o menu aparecer ao clicar no botao menu*/
+        display: block;
+    }
+
+    #menu{  /*fazer com que os botoes sejam presentados na horizontal em vez de vertical*/
+        display: none; /*inicialmente fica escondido*/
+        flex-direction: column;
+        background-color:#ffffff;  /*cor de fundo do menu*/
+        border-radius: 10px;
+    }
+
+    .submenu{ /*ajustar a posicao do subenu para a pretendida*/
+        top: 0;
+        left: 100%;
+    } 
+}
+
+/*aspeto grafico para monitores de tamanho menor que 300px*/
+@media only screen and (max-width: 332px){
+    .submenu{ /*ajustar a posicao do subenu para a pretendida*/
+        position: relative;
+        left: 0;
+    } 
+}

@@ -1,0 +1,10 @@
+body{ margin: 0;min-width: 272px;}
+
+#lista_compras{
+    list-style-type: none;     /* Remove as bolinhas dos elementos da lista */
+
+}
+
+#menu_extra_1{
+    cursor: pointer;
+}
