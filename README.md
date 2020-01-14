@@ -22,3 +22,8 @@ CSS (so-called wrappers), not tables;
 - There must be a balance between the graphic and functional components,
 that is, less graphically crafted websites should be more functionally sophisticated and feature rich sites
 may be less graphically elaborated;
+
+
+### Teammates:
+- Bruno Lopes.
+- Pedro Costa.
